@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/notebook.png"
+      href="./public/images/notebook.png"
     />
 
     <!-- Google Fonts -->
@@ -19,21 +19,27 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./public/css/styles.css" />
   </head>
   <body>
     <img
       id="bg-img"
-      src="./images/linh-nguyen-ls6gX4_Mjv0-unsplash (1).jpg"
+      src="./public/images/linh-nguyen-ls6gX4_Mjv0-unsplash (1).jpg"
       alt=""
     />
     
     <!-- <div class="container1"> -->
-    <form class="container1" action="/submit" method="post">
-      <h1><img src="./images/new_logo_circle.png" alt="" />Daily Journal</h1>
-        <textarea name="journal" id="userInput" cols="30" rows="10">Date:&nbsp;&#13;&#13;Dear Diary,&#10;</textarea>
-        <button type="submit" >Submit</button>
+    <div class="container1">
+      <form class="form" action="/submit" method="post">
+        <h1><img src="./public/images/new_logo_circle.png" alt="" />Daily Journal</h1>
+        <div class="sub-container">
+          <textarea name="journal" id="userInput" cols="30" rows="10">Date:&nbsp;&#13;&#13;Dear Diary,&#10;</textarea>
+          <button type="submit" >Submit</button>
+  
+        </div>
       </form>
+
+    </div>
     <!-- </div> -->
 
     <script s></script>
