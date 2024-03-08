@@ -14,6 +14,13 @@ body{
     z-index: -1;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .container1{
     display: flex;
     flex-direction: column;
@@ -34,10 +41,10 @@ body{
 }
 
 .sub-container{
-    /* background-image: url("https://img.freepik.com/free-vector/geometric-wallpaper_23-2148701210.jpg") ; */
-    background-image: linear-gradient(110deg,#e63946,#219ebc) ;
+    background-image: url("https://cdn.vectorstock.com/i/1000x1000/76/09/seamless-school-background-vector-1347609.webp") ;
+    /* background-image: linear-gradient(110deg,#e63946,#219ebc) ; */
     border-radius: 20px;
-    padding: 24px;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -76,7 +83,7 @@ textarea{
     font-weight:600;
 }
 
-button{
+.container1 button{
     margin-top: 32px;
     width: 14rem;
     height: 45px;
@@ -93,7 +100,7 @@ button{
     letter-spacing: 3px;
 }
 
-button:hover{
+.container1 button:hover{
     /* background-color: #3A015C; */
     /* animation-name: shrink;
     animation-duration: 200ms; */
@@ -102,6 +109,8 @@ button:hover{
     color: #22223b;
     height: 50px;
     width: 12rem;
+
+    cursor:pointer;
 }
 
 @keyframes shrink {
@@ -115,6 +124,59 @@ button:hover{
         height: 50px;
         width: 12rem;
     }
+}
+
+.container2{
+    width: 90%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 5rem;
+    
+    margin-top: 10rem   ;
+}
+
+.card{
+    justify-self: center;
+    border-radius: 10px;
+    width: 65%;
+    height: 25rem;
+    padding: 20px;
+    background-color: #ec3544;
+    box-shadow: 10px 10px #131322;
+    cursor:pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #131322;
+    font-family: "Merriweather", serif;
+}
+
+.card img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ba2c38;
+}
+
+.card p{
+    color:aliceblue;
+    cursor:pointer;
+    align-self: flex-start;
+}
+
+.card button{
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+
+    align-self: flex-end;
+
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
 }
 
 footer{

@@ -1,28 +1,36 @@
 <%- include("header.ejs"); %>
 
 <img
-id="bg-img"
-src="/images/linh-nguyen-ls6gX4_Mjv0-unsplash (1).jpg"
-alt=""
+  id="bg-img"
+  src="/images/linh-nguyen-ls6gX4_Mjv0-unsplash (1).jpg"
+  alt=""
 />
 
-<!-- <div class="container1"> -->
-    <div class="container1">
-      <div class="heading">
-        <img src="/images/new_logo_circle.png" alt="" />
-        <h1>Daily Journal</h1>
-      </div>
-      <form class="form" action="/submit" method="post">
-        <div class="sub-container">
-          <textarea name="journal" id="userInput" cols="30" rows="10">Dear Diary,&#10;</textarea>
-          <button type="submit" >Submit</button>
-  
-        </div>
-      </form>
-
+<div class="main">
+  <div class="container1">
+    <div class="heading">
+      <img src="/images/new_logo_circle.png" alt="" />
+      <h1>Daily Journal</h1>
     </div>
-    <!-- </div> -->
-    
-    <script s></script>
+    <form class="form" action="/submit" method="post">
+      <div class="sub-container">
+        <textarea name="journal" id="userInput" cols="30" rows="10">Dear Diary,&#10;</textarea>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="container2">
+    <% for(var i= 0; i < record.length; i++) { %>
+      <div class="card">
+        <img src="/images/boston-public-library-_f9cP4_unmg-unsplash.jpg" alt="">
+        <h2>Lorem Ipsum</h1>
+        <p><%= record[i].journal.slice(0,100) %>...</p>
 
+        <button type="more">More</button>
+      </div>
+    <% } %>
+  </div>
+
+</div>
 <%- include("footer.ejs"); %>
