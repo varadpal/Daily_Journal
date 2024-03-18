@@ -61,7 +61,8 @@ h1{
     text-transform: uppercase;
     letter-spacing: 10px;
     color: #b8b8ff;
-
+    
+    cursor: default;
 }
 
 textarea{
@@ -143,7 +144,7 @@ textarea{
     height: 25rem;
     padding: 20px;
     background-color: #ec3544;
-    box-shadow: 10px 10px #131322;
+    box-shadow: 15px 15px #131322;
     cursor:pointer;
 
     display: flex;
@@ -152,6 +153,8 @@ textarea{
 
     color: #131322;
     font-family: "Merriweather", serif;
+
+    user-select: none;
 }
 
 .card img{
@@ -179,7 +182,45 @@ textarea{
     font-size: medium;
 }
 
+.card:hover{
+    width: 67%;
+    height: 27rem;
+    box-shadow: 8px 8px #131322;
+    animation: 0.75s fade;
+}
+
+@keyframes fade {
+    0%{
+        width: 65%;
+        height: 25rem;
+        box-shadow: 15px 15px #131322;
+    }
+    100%{
+        width: 67%;
+        height: 27rem;
+        box-shadow: 8px 8px #131322;
+    }
+}
+
+.card:active{
+    background-color: #bd1422;
+}
+
 footer{
     color: white;
 
+}
+
+
+/* Styles for journal.ejs */
+.child1{
+    border-radius: 20px;
+    background-image: url(https://img.freepik.com/free-photo/white-paper-texture_1194-5416.jpg);
+    width: 60rem;
+}
+
+.child1 p{
+    padding: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
 }

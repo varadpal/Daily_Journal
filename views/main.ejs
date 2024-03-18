@@ -12,9 +12,9 @@
       <img src="/images/new_logo_circle.png" alt="" />
       <h1>Daily Journal</h1>
     </div>
-    <form class="form" action="/submit" method="post">
+    <form class="form" action="/" method="post">
       <div class="sub-container">
-        <textarea name="journal" id="userInput" cols="30" rows="10">Dear Diary,&#10;</textarea>
+        <textarea name="journal" id="userInput" cols="30" rows="10"></textarea>
         <button type="submit">Submit</button>
       </div>
     </form>
@@ -22,15 +22,25 @@
   
   <div class="container2">
     <% for(var i= 0; i < record.length; i++) { %>
-      <div class="card">
-        <img src="/images/boston-public-library-_f9cP4_unmg-unsplash.jpg" alt="">
-        <h2>Lorem Ipsum</h1>
-        <p><%= record[i].journal.slice(0,100) %>...</p>
+      <form id="theForm" action="/posts/<%= record[i].id %>" method="post">
+        <div type="submit" class="card" onclick="cardClicker() ">
+          <img src="/images/boston-public-library-_f9cP4_unmg-unsplash.jpg" alt="">
+          <h2>Lorem Ipsum</h2>
+          <p><%= record[i].journal.slice(0,100) %>...</p>
+  
+          <!-- <button type="more">More</button> -->
+        </div>
 
-        <button type="more">More</button>
-      </div>
+      </form>
     <% } %>
   </div>
 
 </div>
+
+<script>
+  let card = document.getElementsByClassName("card");
+  function cardClicker() {
+    document.getElementById("theForm").submit();
+  }
+</script>
 <%- include("footer.ejs"); %>

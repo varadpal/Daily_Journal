@@ -2,6 +2,7 @@
 import express from "express"; 
 import bodyParser from "body-parser";
 import pg from "pg";
+import _ from "lodash";
 
 // To make __dirname (The Following Code is not required as we are currently using ejs)
 import { dirname } from "path"; 
@@ -33,9 +34,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-let result= []
-
-
+let result= [];
 
 app.get("/", function (req, res) {
     
@@ -46,18 +45,37 @@ app.get("/", function (req, res) {
             result = res.rows; 
         }
     });
-    // console.log(result[8].journal.slice(0,100));
+
     res.render("main", {
         record: result
     });    
 })
 
-app.post("/submit", function (req, res) {
+app.post("/", function (req, res) {
     let journal = req.body.journal;
     // console.log(journal);
     
     db.query("INSERT INTO journals (journal) VALUES ($1)",[journal,]); 
     res.redirect("/");
+})
+
+// app.get("/posts/:postName", function(req, res) {
+//     const requestedTitle = _.lowerCase(req.params.postName);
+//     res.render("journal", {
+//         Heading: 'Temp',
+//         Journal: result[requestedTitle]
+//     });
+    
+//     console.log(requestedTitle);
+// })
+
+app.post("/posts/:postName", function(req, res) {
+    const requestedTitle = _.lowerCase(req.params.postName);
+    res.render("journal", {
+        Heading: requestedTitle,
+        Date: result[requestedTitle-1].date,
+        Journal: result[requestedTitle-1].journal
+    });
 })
 
 app.listen(process.env.PORT || port, function () {
