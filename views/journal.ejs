@@ -4,13 +4,24 @@
 
 <div class="main">
     <div class="container1">
-        <h1>Day <%= Heading %></h1>
+        <h1>Journal <%= Heading %></h1>
+        <h2 class="date">-<%= Date.slice(4,15) %></h2>
         <div class="child1">
             <p>
                 Dear Diary,<br>
-                <%= Journal %>
+                <span class="mainText">
+                    <%= Journal.replace("\r\n", function() )%>
+                </span>
             </p>
         </div>
     </div>
 </div>
+
+<script>
+    function EnterNewLine() {
+        console.log("Called");
+        document.getElementsByClassName("mainText").innerHTML = <br />;
+    }
+    document.getElementsByClassName("mainText").inner
+</script>
 <%- include("footer"); %>

@@ -15,10 +15,10 @@ const port = 3000;
 
 // Initializing Database with pg module i.e for postgres
 const db = new pg.Client({
-    user:"postgres",
-    host:"localhost", 
-    database:"dailyJournal", 
-    password:"varad",
+    user:"hlsadqlq",
+    host:"rain.db.elephantsql.com", 
+    database:"hlsadqlq", 
+    password:"lp2zSZiQV5U44yGa1kPNY_TGxlltbVdF",
     port: 5432,
 });
 
@@ -38,7 +38,7 @@ let result= [];
 
 app.get("/", function (req, res) {
     
-    db.query("SELECT * FROM public.journals ORDER BY id ASC;", (err, res) => {
+    db.query("SELECT * FROM journals ORDER BY id ASC;", (err, res) => {
         if (err) {
             console.error(err.stack);
         }else{
@@ -71,11 +71,13 @@ app.post("/", function (req, res) {
 
 app.post("/posts/:postName", function(req, res) {
     const requestedTitle = _.lowerCase(req.params.postName);
+    console.log(result);
     res.render("journal", {
         Heading: requestedTitle,
-        Date: result[requestedTitle-1].date,
+        Date: result[requestedTitle-1].date.toString(),
         Journal: result[requestedTitle-1].journal
     });
+
 })
 
 app.listen(process.env.PORT || port, function () {

@@ -216,11 +216,20 @@ footer{
 .child1{
     border-radius: 20px;
     background-image: url(https://img.freepik.com/free-photo/white-paper-texture_1194-5416.jpg);
-    width: 60rem;
+    width: 50rem;
 }
 
 .child1 p{
     padding: 24px;
     font-family: "Montserrat", sans-serif;
     color: black;
+}
+
+.date{
+    margin: 0;
+    width: 275px;
+    font-family: "Montserrat", sans-serif;
+    font-size: small;
+    color: aliceblue;
+    text-align: right;
 }
