@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #22223b;
+    background-color: #000000;
 }
 
 #bg-img{
@@ -60,13 +60,13 @@ h1{
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     letter-spacing: 10px;
-    color: #b8b8ff;
+    color: #F0EDCF;
     
     cursor: default;
 }
 
 textarea{
-    background-color: beige;
+    background-color: #F0EDCF;
     background-image: url(https://img.freepik.com/free-photo/white-paper-texture_1194-5416.jpg);
     object-fit: fill;
     border: none;
@@ -80,7 +80,7 @@ textarea{
     padding: 20px;
 
     font-family: "Indie Flower", cursive;
-    font-size: 25px;
+    font-size: 20px;
     font-weight:600;
 }
 
@@ -94,7 +94,7 @@ textarea{
     text-transform: uppercase;
     font-size: medium;
 
-    background-color: #22223b;
+    background-color: #000000;
     border: none;
     border-radius: 20px;
     color: white;
@@ -106,7 +106,7 @@ textarea{
     /* animation-name: shrink;
     animation-duration: 200ms; */
     transition: 150ms ease-out;
-    background-color: #b8b8ff;
+    background-color: #F0EDCF;
     color: #22223b;
     height: 50px;
     width: 12rem;
@@ -140,18 +140,18 @@ textarea{
 .card{
     justify-self: center;
     border-radius: 10px;
-    width: 65%;
-    height: 25rem;
+    width: 55%;
+    height: 22rem;
     padding: 20px;
-    background-color: #ec3544;
-    box-shadow: 15px 15px #131322;
+    background-color: #864AF9;
+    box-shadow: 15px 15px #221140;
     cursor:pointer;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    color: #131322;
+    color: #ffff;
     font-family: "Merriweather", serif;
 
     user-select: none;
@@ -162,14 +162,14 @@ textarea{
     height: 12rem;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 5px 5px 8px #ba2c38;
+    /* box-shadow: 5px 5px 8px #6228ce; */
 }
 
-.card p{
+/* .card p{
     color:aliceblue;
     cursor:pointer;
     align-self: flex-start;
-}
+} */
 
 .card button{
     padding: 6px;
@@ -183,27 +183,33 @@ textarea{
 }
 
 .card:hover{
-    width: 67%;
-    height: 27rem;
-    box-shadow: 8px 8px #131322;
+    width: 57%;
+    height: 24rem;
+    background-color: #a1c6ea;
+    box-shadow: 8px 8px #446aa0;
     animation: 0.75s fade;
+
+    color: #000000;
 }
 
 @keyframes fade {
     0%{
-        width: 65%;
-        height: 25rem;
+        width: 55%;
+        height: 22rem;
+        background-color: #864AF9;
         box-shadow: 15px 15px #131322;
+        
     }
     100%{
-        width: 67%;
-        height: 27rem;
-        box-shadow: 8px 8px #131322;
+        width: 57%;
+        height: 24rem;
+        background-color: #a1c6ea;
+        box-shadow: 8px 8px #446aa0;
     }
 }
 
 .card:active{
-    background-color: #bd1422;
+    background-color: #1e5097;
 }
 
 footer{
@@ -222,7 +228,7 @@ footer{
 .child1 p{
     padding: 24px;
     font-family: "Montserrat", sans-serif;
-    color: black;
+    color: #000000;
 }
 
 .date{
@@ -230,6 +236,6 @@ footer{
     width: 275px;
     font-family: "Montserrat", sans-serif;
     font-size: small;
-    color: aliceblue;
+    color: #F0EDCF;
     text-align: right;
 }

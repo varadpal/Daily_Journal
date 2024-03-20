@@ -9,19 +9,19 @@
         <div class="child1">
             <p>
                 Dear Diary,<br>
-                <span class="mainText">
-                    <%= Journal.replace("\r\n", function() )%>
-                </span>
+                <!-- <span class="mainText" onload="EnterNewLine()">
+                </span> -->
+                <%= Journal %>
             </p>
         </div>
     </div>
 </div>
 
-<script>
+<!-- <script>
     function EnterNewLine() {
         console.log("Called");
-        document.getElementsByClassName("mainText").innerHTML = <br />;
+        document.getElementsByClassName("mainText").innerHTML = Journal.replace("\r\n", <br>);
     }
-    document.getElementsByClassName("mainText").inner
-</script>
+    // document.getElementsByClassName("mainText").inner
+</script> -->
 <%- include("footer"); %>

@@ -71,7 +71,7 @@ app.post("/", function (req, res) {
 
 app.post("/posts/:postName", function(req, res) {
     const requestedTitle = _.lowerCase(req.params.postName);
-    console.log(result);
+    // console.log(result);
     res.render("journal", {
         Heading: requestedTitle,
         Date: result[requestedTitle-1].date.toString(),
