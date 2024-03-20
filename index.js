@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Initializing express()
 const app = express();
-const port = 3000; 
+const port = 8000; 
 
 // Initializing Database with pg module i.e for postgres
 const db = new pg.Client({
