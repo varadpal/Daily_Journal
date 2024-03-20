@@ -15,10 +15,10 @@ const port = 3000;
 
 // Initializing Database with pg module i.e for postgres
 const db = new pg.Client({
-    user:"hlsadqlq",
-    host:"rain.db.elephantsql.com", 
-    database:"hlsadqlq", 
-    password:"lp2zSZiQV5U44yGa1kPNY_TGxlltbVdF",
+    user:"postgres.njoelgqxtqpwzguyddqn",
+    host:"aws-0-ap-south-1.pooler.supabase.com", 
+    database:"postgres", 
+    password:"socket'ssecretdailyjournal",
     port: 5432,
 });
 
