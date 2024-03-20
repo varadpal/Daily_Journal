@@ -1,5 +1,6 @@
 // Importing Necessary Packages
 import express from "express"; 
+import cors from "cors";
 import bodyParser from "body-parser";
 import pg from "pg";
 import _ from "lodash";
@@ -24,6 +25,13 @@ const db = new pg.Client({
 
 db.connect();   // Do not forget to write connect() else our app.js won't connect to db
 
+const corsConfig = {
+    origin: "*", 
+    credential: true, 
+    methods: ["GET", "POST", "PUT", "DELETE"],
+};
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 // Initializing Body Parser
 app.use(bodyParser.urlencoded({extended: true}));
 
