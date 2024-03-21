@@ -6,6 +6,6 @@ https://dailyjournal-c7cl.onrender.com/
 
 ![Journal 1](https://github.com/varadpal/Daily_Journal/assets/71415224/bf3b5fdf-978c-4b12-8505-541937466e47)
 
-Thanks For Reading, 
-Varad Pal (a.k.a Socket Gut)
-Developer
+Thanks For Reading, <br>
+Varad Pal (a.k.a Socket Gut)<br>
+Developer<br>
