@@ -22,16 +22,18 @@
   
   <div class="container2">
     <% for(var i= 0; i < record.length; i++) { %>
-      <form id="theForm" action="/posts/<%= record[i].id %>" method="post">
-        <div type="submit" class="card" onclick="cardClicker() ">
-          <img src="/images/boston-public-library-_f9cP4_unmg-unsplash.jpg" alt="">
-          <h2>Journal <%= record[i].id  %></h2>
-          <p>
-            <%= record[i].journal.slice(0,100) %>...
-          </p>
-  
-          <!-- <button type="more">More</button> -->
-        </div>
+      <form id="theForm" action="" method="post">
+        <a href="/posts/<%= record[i].id %>">
+          <div type="submit" class="card" onclick="cardClicker() ">
+            <img src="/images/boston-public-library-_f9cP4_unmg-unsplash.jpg" alt="">
+            <h2>Journal <%= record[i].id  %></h2>
+            <p>
+              <%= record[i].journal.slice(0,100) %>...
+            </p>
+    
+            <!-- <button type="more">More</button> -->
+          </div>
+        </a>
 
       </form>
     <% } %>

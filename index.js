@@ -23,6 +23,7 @@ const db = new pg.Client({
     port: 5432,
 });
 
+
 db.connect();   // Do not forget to write connect() else our app.js won't connect to db
 
 const corsConfig = {
@@ -77,15 +78,19 @@ app.post("/", function (req, res) {
 //     console.log(requestedTitle);
 // })
 
-app.post("/posts/:postName", function(req, res) {
-    const requestedTitle = _.lowerCase(req.params.postName);
-    // console.log(result);
-    res.render("journal", {
-        Heading: requestedTitle,
-        Date: result[requestedTitle-1].date.toString(),
-        Journal: result[requestedTitle-1].journal
+app.get("/posts/:id", function(req, res) {
+    const requestedTitle = _.lowerCase(req.params.id);
+    result.forEach(function(element) {
+        const storedTitle = _.lowerCase(element.id);
+        
+        if (requestedTitle === storedTitle) {
+            res.render("journal", {
+                Heading: requestedTitle,
+                Date: result[requestedTitle-1].date.toString(),
+                Journal: result[requestedTitle-1].journal
+            })
+        }
     });
-
 })
 
 app.listen(process.env.PORT || port, function () {
